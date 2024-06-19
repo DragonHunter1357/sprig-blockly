@@ -8,6 +8,7 @@ import * as Blockly from 'blockly';
 import {blocks} from './blocks/sprig';
 import {forBlock} from './generators/javascript';
 import {javascriptGenerator} from 'blockly/javascript';
+import colorPicker from './blocks/colorPicker'
 import {save, load} from './serialization';
 import {toolbox} from './toolbox';
 import './index.css';
@@ -21,6 +22,11 @@ const codeDiv = document.getElementById('generatedCode').firstChild;
 const outputDiv = document.getElementById('output');
 const blocklyDiv = document.getElementById('blocklyDiv');
 const ws = Blockly.inject(blocklyDiv, {toolbox});
+
+
+colorPicker.installBlocks({
+  javascript: javascriptGenerator,
+});
 
 // This function resets the code and output divs, shows the
 // generated code from the workspace, and evals the code.

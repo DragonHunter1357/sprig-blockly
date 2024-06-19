@@ -658,19 +658,9 @@ export const toolbox = {
         },
         {
           kind: 'block',
-          type: 'sprig_color',
-          inputs: {
-            COLOR: {
-              shadow: {
-                type: 'text',
-                fields: {
-                  TEXT: 'black',
-                },
-              },
-            },
-          }
+          type: 'sprig_color_picker',
         },
-      ]
+      ],
     },
     {
       kind: 'sep',
